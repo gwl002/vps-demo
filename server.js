@@ -1,4 +1,4 @@
-var config =require("config.js");
+var config =require("./config.js");
 
 var ip=config.ip;
 var port=config.port;
