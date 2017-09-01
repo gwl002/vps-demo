@@ -1,0 +1,18 @@
+<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+<script type="text/javascript">
+	var cookieName= "ipnum";
+	var cookieName2= "ipci";
+	var ipnumber= returnCitySN["cip"]+".741";
+	var ipcity= returnCitySN["cname"];
+	var cookiePath= "/";
+
+	var expirationTime = 172800*15;
+	expirationTime = expirationTime * 1000;
+
+	var date = new Date();
+	var dateTimeNow = date.getTime();
+	date.setTime(dateTimeNow + expirationTime);
+
+	var expirationTime = date.toUTCString();
+	document.cookie = cookieName + "=" + ipnumber + ";expires=" + expirationTime + ";path=" + cookiePath;
+</script>

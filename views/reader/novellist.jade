@@ -1,0 +1,12 @@
+extends ../layout
+block main
+	.container
+		.row
+			h3 玄幻小说&nbsp;
+				a.small(href="http://www.biquku.com")
+					来源网站
+			ul.books
+				each book in list
+					li.book
+						a(href="book/?type="+book.type+"&book="+book.book)
+							=book.title

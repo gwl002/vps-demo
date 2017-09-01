@@ -1,0 +1,18 @@
+extends layout
+append css
+	link(rel="stylesheet", href="/css/snake.css")
+block main
+	ul.info
+		li 昵称:
+			span#nick
+		li 分数:
+			span#score 0
+		li 记录:
+			span#record= record
+		li
+			a#start 开始游戏
+		li
+			a#restart 重新开始
+	canvas#canvas(width="450px",height="450px")
+	script(src="/components/jquery/dist/jquery.js")
+	script(src="/js/snake.js")

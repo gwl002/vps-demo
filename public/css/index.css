@@ -1,0 +1,12 @@
+.intro p{
+	text-indent: 2em;
+}
+
+.intro h3{
+	padding-left:40px;
+}
+
+.intro h3 a:hover{
+	text-decoration: none;
+	color:#DE5252;
+}

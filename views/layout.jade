@@ -1,0 +1,66 @@
+doctype html
+html(lang='en')
+	head
+		meta(charset='UTF-8')
+		meta(name='viewport', content='width=device-width,initial-scale=1,user-scalable=no')
+		title= title
+		block css
+			link(rel="stylesheet", href="/components/bootstrap/dist/css/bootstrap.min.css")
+		block scripts
+			script(src="/components/jquery/dist/jquery.min.js")
+			script(src="/components/bootstrap/dist/js/bootstrap.min.js")
+			script(src="/js/login.js")
+		// Google Tag Manager
+		script.
+			(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+			new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+			j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+			'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+			})(window,document,'script','dataLayer','GTM-WGMNDC6');
+		// End Google Tag Manager
+			
+	body
+		// Google Tag Manager (noscript)
+		noscript
+			iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-WGMNDC6', height='0', width='0', style='display:none;visibility:hidden')
+		// End Google Tag Manager (noscript)
+		.navbar.navbar-inverse.navbar-top-fixed(role="navigation")
+			.container
+				.navbar-header
+					button(type="button",class="navbar-toggle",data-toggle="collapse",data-target="#nav-collapse")
+						span.sr-only  切换导航
+						span.icon-bar
+						span.icon-bar
+						span.icon-bar
+					a.navbar-brand
+						游戏之作
+				.collapse.navbar-collapse#nav-collapse
+					ul.nav.navbar-nav.navbar-left
+						li
+							a(href="/")
+								首页
+						li
+							a(href="/novellist")
+								小说
+						li
+							a(href="/snake")
+								贪吃蛇
+						li
+							a(href="/chat")
+								聊天室
+						li 
+							a(href="/interface")
+								微信
+					ul.nav.navbar-nav.navbar-right
+						li
+							a#registerBtn
+								span.glyphicon.glyphicon-user
+								&nbsp;&nbsp;注册
+						li
+							a#loginBtn
+								span.glyphicon.glyphicon-log-in
+								&nbsp;&nbsp;登录
+		block main
+		block js
+
+		

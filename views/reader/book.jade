@@ -1,0 +1,19 @@
+extends ../layout
+append css
+	link(rel="stylesheet", href="/css/book.css")
+block main
+	.container
+		.row
+			.panel.panel-default
+				.panel-heading
+					h2.panel-title= book.title
+				.panel-body
+					h4= book.author
+					p.intro= book.intro
+			.panel.panel-default
+				.panel-body
+					ul
+						each chapter in book.chapters
+							li.col-md-4
+								a(href="/reader/?type="+book.type+"&book="+book.book+"&chapter="+book.chapters.indexOf(chapter))
+									= chapter.title

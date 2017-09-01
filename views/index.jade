@@ -1,0 +1,48 @@
+extends layout
+append css
+	link(rel="stylesheet", href="/css/index.css")
+block main
+	.container
+		.jumbotron
+			h1 欢迎来到gwl002小站！
+			p 这是我学习nodejs和前端知识的游戏之作,部署在国外的paas平台openshift上。
+			p 此网站已经被点击#{counter}次！
+			p 
+				a.btn.btn-primary.btn-lg#learn-more
+					学习更多
+		.row.intro
+			.col-md-4
+				h3 
+					a(href="/novellist") 小说站
+				ul.list-group
+					li.list-group-item
+						p   使用nodejs爬虫框架crawler.js爬取小说网站
+							a(href="http://www.biquku.com") 笔趣库
+							的部分小说。主要工作是通过爬虫爬取网站小说保存在public文件夹中(因为免费的openshift帐号支持的数据库容量太小，所以没有使用数据库存小说内容)。
+					li.list-group-item
+						p 	开放一个接口/updateOne/?type=BOOKTYPE&book=BOOKID,更新单一小说。可以现在笔趣库找到小说的类型和书的id，再来更新这本小说。未来会考虑写一个搜索框可以直接输小说名更新小说。
+					li.list-group-item
+						p 	网上的免费小说站点都是各种广告，一不小心就点到图片，弹进各种页面了。干脆自己写一个，没有广告，清清爽爽！
+			.col-md-4
+				h3 
+					a(href="/snake") 贪吃蛇小游戏
+				ul.list-group
+					li.list-group-item
+						p   贪吃蛇是我学每种编程语言都用来练手的，简单有趣，用html5新增的canvas写的。js写的有点卡，比我以前用c++和python写的卡多了，本来还想写个智能寻路的，结果卡的动不了，看来我的js水平还有待提高，最近学react，redux又写了一个，嘻嘻。
+					li.list-group-item
+						p   玩法，方向键控制上下左右，p键暂停。每次会提示输入姓名，后台会记录每个玩家的成绩，每次页面都会显示最高记录，每次游戏结束会提示有没有打破自己的记录。
+			.col-md-4
+				h3
+					a(href="/chat")	聊天室
+				ul.list-group
+					li.list-group-item
+						p   学习socket.io顺便写一个简易的聊天室玩玩。Socket.IO是一个完全由JavaScript实现、基于Node.js、支持WebSocket的协议用于实时通信、跨平台的开源框架，它包括了客户端的JavaScript和服务器端的Node.js.
+					li.list-group-item
+						p   Socket.IO除了支持WebSocket通讯协议外，还支持许多种轮询（Polling）机制以及其它实时通信方式，并封装成了通用的接口，并且在服务端实现了这些实时机制的相应代码。Socket.IO会根据浏览器对通讯机制的支持情况,字典选择最佳方式实现网络实时通信.
+					li.list-group-item
+						p   访客不需要认证，只需要输入用户名就可以直接在聊天室聊天。每次进入都会显示最近的10条聊天记录。右侧是在线名单。
+
+		
+
+
+

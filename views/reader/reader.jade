@@ -1,0 +1,28 @@
+extends ../layout
+append css
+	link(rel="stylesheet", href="/css/reader.css")
+block main
+	.container
+		.content_read
+			.box_con
+				.con_top
+					a(href="#") 小说阅读器
+					&gt;
+					a.book_type(href="/novellist") 小说类型
+					&gt;
+					a.book_title(href="#") 小说题目
+					&gt;正文&nbsp;
+					span.chapter_title
+				.bookname
+					h2.chapter_title 
+				.bottem
+					a.pre_chapter_btn(href="javascript:;") 上一章
+					a.chapter_btn(href="javascript:;") 章节目录
+					a.post_chapter_btn(href="javascript:;") 下一章
+				#content 正文加载中...
+				.bottem
+					a.pre_chapter_btn(href="javascript:;") 上一章
+					a.chapter_btn(href="javascript:;") 章节目录
+					a.post_chapter_btn(href="javascript:;") 下一章
+append js		
+	script(src="/js/reader.js")
