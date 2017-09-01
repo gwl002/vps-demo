@@ -5,5 +5,6 @@ module.exports={
 	dbuser:"gwl002",
 	dbpasswd:"admin123",
 	dbhost:"127.0.0.1",
-	dbport:"27017"
+	dbport:"27017",
+	adminpwd:"admin"
 }
