@@ -17,7 +17,7 @@ var server=require("http").createServer(app);
 var io=require("socket.io",{transports: ['websocket']}).listen(server);
 // var mongoURL="mongodb://"+mongo_host+":"+mongo_port+"/weixin";
 // var mongoURL="mongodb://admin:c-WLBJhsgQGx@"+mongo_host+":"+mongo_port+"/weixin";
-var mongoURL = "mongodb://"+user+":"+passwd+"@"+mongo_host+":"+mongo_port+"/"+dbname;
+var mongoURL = "mongodb://"+mongo_host+":"+mongo_port+"/"+dbname;
 
 mongoose.connect(mongoURL,function(err){
 	if(err){
