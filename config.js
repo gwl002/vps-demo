@@ -1,5 +1,5 @@
 module.exports={
-	ip:"127.0.0.1",
+	ip:"0.0.0.0",
 	port:80,
 	dbname:"weixin",
 	dbuser:"gwl002",
