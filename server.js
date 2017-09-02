@@ -68,6 +68,9 @@ require("./router/weixin.js")(app);
 require("./router/snake.js")(app);
 require("./router/chat.js")(app,io);
 require("./router/reader.js")(app);
+app.use(function(req,res){
+    res.send("Page not found!")
+})
 
 server.listen(port,ip);
 console.log("server is listening on %s : %s",ip,port);
