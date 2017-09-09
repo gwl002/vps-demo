@@ -1,6 +1,6 @@
 module.exports={
 	ip:"0.0.0.0",
-	port:80,
+	port:8080,
 	dbname:"weixin",
 	dbuser:"gwl002",
 	dbpasswd:"admin123",
