@@ -45,8 +45,9 @@ module.exports=function(app){
 	app.get("/updateOne",function(req,res){
 		var type=req.query.type;
 		var book=req.query.book;
-		updateOne(url+"/"+type+"/"+book);
-		res.send("starting crawler book /"+type+"/"+book+"!");
+		var book_url = type?(url+"/"+type+"/"+book):(url+"/"+book);
+		updateOne(book_url);
+		res.send("starting crawler book "+ book_url);
 	})
 
 }
