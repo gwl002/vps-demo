@@ -1,6 +1,6 @@
 var fs=require("fs");
 var cp=require("child_process");
-var url="http://www.biquku.com";
+var url="http://www.biquku.co";
 var updateOne=require("../common/crawler.js").updateOne;
 var update=require("../common/crawler.js").update;
 
